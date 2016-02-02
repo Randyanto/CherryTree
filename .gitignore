@@ -1,0 +1,9 @@
+Library/
+Temp/
+*.swp
+*~
+*.sln
+*.csproj
+.DS_Store
+Assembly-*
+*.userprefs
