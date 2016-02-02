@@ -8,7 +8,9 @@ Mainly there are 2 types of cherries, i.e. Scripting and Editor. The Scripting c
 #### Scripting
 | Name | Description |
 |---|---|
-| ctDict | Create dictionary from objects with their names as keys | 
+| ctDict | Create dictionary from objects with their names as keys |
+| ctAudioDict | Create dictionary from AudioClip with their names as keys |
+| ctAudioPlayer | Controlling AudioSource component where this script is attached | 
 | ... | still growing |
 
 #### Editor 
