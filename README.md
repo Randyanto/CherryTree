@@ -8,7 +8,7 @@ Mainly there are 2 types of cherries, i.e. Scripting and Editor. The Scripting c
 #### Scripting
 | Name | Description |
 |---|---|
-| cDict | Create dictionary from objects with their names as keys | 
+| ctDict | Create dictionary from objects with their names as keys | 
 | ... | still growing |
 
 #### Editor 
