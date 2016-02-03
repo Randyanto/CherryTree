@@ -12,13 +12,13 @@ using UnityEngine;
 namespace CherryTree {
 
     public class chAudioSource : MonoBehaviour {
-
+        
         //> VARIABLES
 
         private AudioSource _source;
         private float _initialVol;
 
-        //> EVENT
+        //> EVENTS
 
         public virtual void Awake() {
             Initialize();

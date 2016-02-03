@@ -15,6 +15,8 @@ namespace CherryTree {
 
         public chAudioClipDict dictionary;
 
+        //> EVENTS
+
         public override void Awake() {            
             Initialize();
         }            
