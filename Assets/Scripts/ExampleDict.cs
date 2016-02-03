@@ -1,20 +1,22 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
-    
+using CherryTree; // don't forget to use CherryTree namespace
+   
 public class ExampleDict : MonoBehaviour {
 
     public GameObject[] prefabs;
-    private Dictionary<string, GameObject> objDict;
+    private chDict<GameObject> objDict;
 
-    void Awake(){
+    void Awake() {
+        
         // create objects dictionary
-        objDict = ctDict<GameObject>.CreateDict(prefabs);
+        objDict = new chDict<GameObject>(prefabs);
 
         // log every loaded sounds
-        foreach (string key in objDict.Keys){
+        foreach (string key in objDict.Keys) {
             Debug.Log(key + " is loaded");
         }
+
     }
 
-} // end class
+} // end class   
     

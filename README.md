@@ -6,11 +6,12 @@ This repo contains some Unity scripts that are simple and easy for others to lev
 Mainly there are 2 types of cherries, i.e. Scripting and Editor. The Scripting cherries can be used in run-time while the Editor cherries can be used to extend the functionality of Unity Editor.
 
 #### Scripting
-| Name | Description |
-|---|---|
-| ctDict | Create dictionary from objects with their names as keys |
-| ctAudioDict | Create dictionary from AudioClip with their names as keys |
-| ctAudioPlayer | Controlling AudioSource component where this script is attached | 
+| Name | Description | Dependency |
+|---|---|---|
+| chDict | Create dictionary from objects with their names as keys |   |
+| chAudioClipDict | Create dictionary from AudioClip with their names as keys | chDict |
+| chAudioSource | Controlling AudioSource component where this script is attached |   |
+| chAudioPlayer | Combine chAudioSource and chAudioClipDict | chAudioClipDict, chAudioSource | 
 | ... | still growing |
 
 #### Editor 
