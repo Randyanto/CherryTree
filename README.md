@@ -1,23 +1,48 @@
 
 # CherryTree
-This repo contains some Unity scripts that are simple and easy for others to leverage. Each folder has its own README to explain the usage in more depth than here. All scripts are being written with the latest Unity 5 and may or may not work in earlier versions.
+This repo contains some Unity scripts that are simple and easy for others to leverage. All scripts are being written with the latest Unity 5 and may or may not work in earlier versions.
 
 ## Cherries
-Mainly there are 2 types of cherries, i.e. Scripting and Editor. The Scripting cherries can be used in run-time while the Editor cherries can be used to extend the functionality of Unity Editor.
+Mainly there are 3 types of cherries, i.e. Property, Runtime, and Editor. The Property cherries contain the custom attribute and editor for property in the inspector tab. The Runtime cherries can be used in run-time while the Editor cherries can be used to extend the functionality of Unity Editor.
 
-#### Scripting
+### Main
+
 | Name | Description | Dependency |
 |---|---|---|
-| chDict | Create dictionary from objects with their names as keys |   |
-| chAudioClipDict | Create dictionary from AudioClip with their names as keys | chDict |
-| chAudioSource | Controlling AudioSource component where this script is attached |   |
-| chAudioPlayer | Combine chAudioSource and chAudioClipDict | chAudioClipDict, chAudioSource | 
-| ... | still growing |
+| chConstant | Contains several Unity constans |   |
+| ... | still growing | ... |
 
-#### Editor 
+### Property
+
+#### chPropertyAttribute
+Custom attribute
+
+| Name | Description | Dependency |
+|---|---|---|
+| chTagSelectorAttribute | Unity tag selector attribute |   |
+| ... | still growing | ... |
+
+#### chPropertyDrawer
+Custom property drawer
+
+| Name | Description | Dependency |
+|---|---|---|
+| chTagSelectorPropertyDrawer | Unity tag selector property drawer | chTagSelectorAttribute, chConstant |
+| ... | still growing | ... |
+
+### Runtime
+| Name | Description | Dependency |
+|---|---|---|
+| chAudioLoader | Load inputted AudioClips by using chDict |   |
+| chAudioSource | Controlling AudioSource component where this script is attached |   |
+| chAudioPlayer | Combine chAudioSource and chAudioLoader | chAudioLoader, chAudioSource |
+| chAudioManager | Manage several chAudioPlayers by Unity tags | chAudioPlayer, chPropertyAttribute, chPropertyDrawer, chConstant | 
+| ... | still growing | ... |
+
+### Editor 
 | Name | Description |
-|---|---|
-| ... | still growing | 
+|---|---|---|
+| ... | still growing | ... | 
 
 ## Usage
 Simply clone the repository and open it with Unity.
