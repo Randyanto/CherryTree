@@ -25,7 +25,7 @@ Mainly there are 4 types of cherries, i.e. Main, Property, Runtime, and Editor. 
 | chAudioLoader | Load inputted AudioClips by using chDict |   |
 | chAudioSource | Controlling AudioSource component where this script is attached |   |
 | chAudioPlayer | Combine chAudioSource and chAudioLoader | chAudioLoader, chAudioSource |
-| chAudioManager | Manage several chAudioPlayers by Unity tags | chAudioPlayer, chPropertyAttribute, chPropertyDrawer, chConstant | 
+| chAudioManager | Manage several chAudioPlayers by Unity tags | chAudioPlayer, chTagSelector, chConstant | 
 | ... | still growing | ... |
 
 #### Editor 
