@@ -3,34 +3,23 @@
 This repo contains some Unity scripts that are simple and easy for others to leverage. All scripts are being written with the latest Unity 5 and may or may not work in earlier versions.
 
 ## Cherries
-Mainly there are 3 types of cherries, i.e. Property, Runtime, and Editor. The Property cherries contain the custom attribute and editor for property in the inspector tab. The Runtime cherries can be used in run-time while the Editor cherries can be used to extend the functionality of Unity Editor.
+Mainly there are 4 types of cherries, i.e. Main, Property, Runtime, and Editor. The Property cherries contain the custom attribute and editor for property in the inspector tab. The Runtime cherries can be used in run-time while the Editor cherries can be used to extend the functionality of Unity Editor.
 
-### Main
+#### Main
 
 | Name | Description | Dependency |
 |---|---|---|
 | chConstant | Contains several Unity constans |   |
 | ... | still growing | ... |
 
-### Property
-
-#### chPropertyAttribute
-Custom attribute
+#### Property
 
 | Name | Description | Dependency |
 |---|---|---|
-| chTagSelectorAttribute | Unity tag selector attribute |   |
+| chTagSelector | Unity tag selector | chConstant |
 | ... | still growing | ... |
 
-#### chPropertyDrawer
-Custom property drawer
-
-| Name | Description | Dependency |
-|---|---|---|
-| chTagSelectorPropertyDrawer | Unity tag selector property drawer | chTagSelectorAttribute, chConstant |
-| ... | still growing | ... |
-
-### Runtime
+#### Runtime
 | Name | Description | Dependency |
 |---|---|---|
 | chAudioLoader | Load inputted AudioClips by using chDict |   |
@@ -39,7 +28,7 @@ Custom property drawer
 | chAudioManager | Manage several chAudioPlayers by Unity tags | chAudioPlayer, chPropertyAttribute, chPropertyDrawer, chConstant | 
 | ... | still growing | ... |
 
-### Editor 
+#### Editor 
 | Name | Description |
 |---|---|---|
 | ... | still growing | ... | 
