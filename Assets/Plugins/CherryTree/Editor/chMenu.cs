@@ -8,7 +8,7 @@ namespace CherryTree {
 
     public class chMenu {
 
-        [MenuItem("CherryTree/Create C# Enum from Unity Tags")]
+        [MenuItem("CherryTree/Create Constants from Unity Tags")]
         static void CreateCsEnumFromUnityTags() {
 
             string moduleName = "CherryTree";                                  
