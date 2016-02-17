@@ -33,7 +33,7 @@ Mainly there are 5 types of cherries, i.e. Main, Util, Property, Runtime, and Ed
 | chAudioLoader | Load inputted AudioClips into dictionary by using LINQ. |   |
 | chAudioSource | Controlling AudioSource component where this script is attached. |   |
 | chAudioPlayer | Combine chAudioSource and chAudioLoader. | chAudioLoader, chAudioSource |
-| chAudioManager | Manage several chAudioPlayers by Unity tags. | chAudioPlayer, chTagSelector, chConstant | 
+| chAudioManager | Manage several chAudioPlayers by Unity tags. | chAudioPlayer, chTagSelector | 
 | ... | still growing | ... |
 
 #### Editor 
