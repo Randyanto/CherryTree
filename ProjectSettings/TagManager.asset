@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AudioSFX
   - AudioBGM
+  - Test
   layers:
   - Default
   - TransparentFX

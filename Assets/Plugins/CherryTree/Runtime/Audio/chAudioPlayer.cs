@@ -21,8 +21,8 @@
 // 3. This notice may not be removed or altered from any source distribution.
 //
 //------------------------------------------
-// 2016/02/03  Initial version
-// 2016/02/04  Add copyright
+// 2016/02/03  Randy  Initial version
+// 2016/02/04  Randy  Add copyright
 //------------------------------------------
 
 using UnityEngine;

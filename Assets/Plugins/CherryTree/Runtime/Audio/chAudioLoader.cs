@@ -21,11 +21,11 @@
 // 3. This notice may not be removed or altered from any source distribution.
 //
 //------------------------------------------
-// 2016/02/02  Initial version
-// 2016/02/03  Add namespace
-//             Add "Sort AudioClips" context menu
-// 2016/02/04  Add copyright
-// 2016/02/05  Use Linq
+// 2016/02/02  Randy  Initial version
+// 2016/02/03  Randy  Add namespace
+//                    Add "Sort AudioClips" context menu
+// 2016/02/04  Randy  Add copyright
+// 2016/02/05  Randy  Use Linq
 //------------------------------------------
 
 using UnityEngine;

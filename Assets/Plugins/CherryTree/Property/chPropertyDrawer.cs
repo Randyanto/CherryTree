@@ -21,7 +21,7 @@
 // 3. This notice may not be removed or altered from any source distribution.
 //
 //------------------------------------------
-// 2016/02/05  Initial version
+// 2016/02/05  Randy  Initial version
 //------------------------------------------
 
 using UnityEngine;
@@ -45,7 +45,7 @@ namespace CherryTree {
                 } else {                    
                     
                     string[] tags = UnityEditorInternal.InternalEditorUtility.tags.Where(
-                                            str => (str != chConstant.TAG_UNTAGGED)
+                                            str => (str != chUnityTags.UNTAGGED)
                                     ).ToArray();                    
                     string stag = property.stringValue;
                     int index = -1;

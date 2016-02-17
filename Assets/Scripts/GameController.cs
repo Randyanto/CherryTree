@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour {
     public chAudioManager audioManager;
 
 	void Start() {
-        audioManager.GetAudioPlayer(AudioBGM).Play("Thunder");
+        //audioManager.GetAudioPlayer(AudioBGM).Play("Thunder");        
     }
 
 }
