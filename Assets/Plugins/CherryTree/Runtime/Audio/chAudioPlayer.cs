@@ -36,7 +36,7 @@ namespace CherryTree {
         public chAudioLoader loader;        
 
         //> PUBLIC
-
+        
         public void Play(string key, bool force = true) {
             base.Play(loader.GetAudioClip(key), force);
         }

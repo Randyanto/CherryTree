@@ -26,6 +26,8 @@
 // 2016/02/03  Randy  Add namespace
 //             Randy  Add logger
 //             Randy  Automatically add AudioSource if there is no AudioSource attached
+// 2016/02/18  Randy  Add Pause, UnPause
+//                    Change Mute and UnMute implementation
 //------------------------------------------
 
 using UnityEngine;
@@ -36,8 +38,7 @@ namespace CherryTree {
         
         //> VARIABLES
 
-        private AudioSource _source;
-        private float _initialVol;
+        private AudioSource _source;        
 
         //> EVENTS
 
@@ -51,7 +52,7 @@ namespace CherryTree {
         }
 
         public virtual void OnEnable() {
-            Unmute();
+            UnMute();
         }
 
         public virtual void OnDisable() {
@@ -68,45 +69,54 @@ namespace CherryTree {
             // if there is NO audio source then add one
             if (_source == null) {
                 _source = this.gameObject.AddComponent<AudioSource>();
-            }
-
-            // save initial volume
-            _initialVol = _source.volume;
+            }            
         }            
             
         //> PUBLIC
-
-        public void Play(AudioClip clip, bool force = true) {
+            
+        //return the length of clip if succeed if not then return 0
+        public float Play(AudioClip clip, bool force = true) {
             // force the audio player to stop
             if (_source.isPlaying && force) {
                 Stop();
             }
 
             // if the audio player is not playing then play
+            float clipLength = 0;
             if (!_source.isPlaying){
+                clipLength = clip.length;
                 _source.clip = clip;
                 _source.Play();    
-            } 
-        }            
+            }
 
-        public void PlayOneShot(AudioClip clip) {
-            // play the audio clip and can't be stopped
-            _source.PlayOneShot(clip);
+            return clipLength;
         }
 
-        public void Stop() {
-            // stop the audio
+        //return the length of clip
+        public float PlayOneShot(AudioClip clip) {
+            // play the audio clip and can't be stopped
+            _source.PlayOneShot(clip);
+            return clip.length;
+        }
+
+        public void Pause() {            
+            _source.Pause();
+        }
+
+        public void UnPause() {                        
+            _source.UnPause();
+        }
+
+        public void Stop() {            
             _source.Stop();
         }
 
-        public void Mute() {
-            // PlayOneShot can't be stopped so one of the solution is to MUTE the AudioSource
-            _source.volume = 0;
+        public void Mute() {            
+            _source.mute = true;            
         }
 
-        public void Unmute() {
-            // reset the volume into initial volume
-            _source.volume = _initialVol;
+        public void UnMute() {
+            _source.mute = false;            
         }
 
         //> LOG
